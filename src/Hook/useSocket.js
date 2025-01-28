@@ -12,7 +12,6 @@ const useSocket = (url) => {
       console.log("Connected to Socket.IO server");
     });
 
-    // Handle connection error
     socketInstance.on("connect_error", (error) => {
       console.error("Socket connection error:", error);
     });
@@ -20,14 +19,12 @@ const useSocket = (url) => {
     // Save socket instance to state
     setSocket(socketInstance);
 
-    // Cleanup: Disconnect socket on component unmount
     return () => {
       socketInstance.disconnect();
       console.log("Socket disconnected");
     };
-  }, [url]); // Re-run if the URL changes
-
-  return socket; // Expose the socket instance
+  }, [url]);
+  return socket;
 };
 
 export default useSocket;

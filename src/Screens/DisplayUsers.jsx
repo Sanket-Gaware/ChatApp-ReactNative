@@ -97,51 +97,6 @@ const DisplayUsers = ({ navigation }) => {
   };
 
   return (
-    // <SafeAreaProvider>
-    //   <SafeAreaView>
-    //     <View>
-    //       {users.length > 0 ? (
-    //         <View>
-    //           {currentUser && (
-    //             <Text
-    //               style={{
-    //                 fontSize: 18,
-    //                 fontWeight: "bold",
-    //                 color: "green",
-    //                 marginVertical: 10,
-    //                 textAlign: "center",
-    //               }}
-    //             >
-    //               {currentUser.fullname.toUpperCase()}
-    //             </Text>
-    //           )}
-    //           {users
-    //             .filter((users) => users.username !== username)
-    //             .map((user, i) => (
-    //               <Text
-    //                 style={{
-    //                   margin: 10,
-    //                   padding: 10,
-    //                   textAlign: "center",
-    //                 }}
-    //                 key={i}
-    //                 onPress={() =>
-    //                   navigation.navigate("Conversation", {
-    //                     id: user._id,
-    //                     id1: currentUser._id,
-    //                   })
-    //                 }
-    //               >
-    //                 {user.username}
-    //               </Text>
-    //             ))}
-    //         </View>
-    //       ) : (
-    //         <Text>No users found or network problem.</Text>
-    //       )}
-    //     </View>
-    //   </SafeAreaView>
-    // </SafeAreaProvider>
     <SafeAreaProvider style={{ flex: 1 }}>
       <SafeAreaView style={styles.container}>
         <View style={styles.searchBarContainer}>
@@ -214,8 +169,6 @@ const styles = StyleSheet.create({
   },
   searchBarContainer: {
     paddingHorizontal: 15,
-    // borderBottomWidth: 1,
-    // borderBottomColor: "#ccc",
   },
   searchBar: {
     height: 45,
@@ -231,8 +184,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     padding: 10,
-    // borderBottomWidth: 1,
-    // borderBottomColor: "#ccc",
   },
   username: {
     fontSize: 16,

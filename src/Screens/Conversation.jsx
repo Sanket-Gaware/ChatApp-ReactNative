@@ -108,66 +108,6 @@ const Conversation = ({ route }) => {
     }
   };
   return (
-    // <SafeAreaProvider style={{ flex: 1 }}>
-    //   <SafeAreaView style={{ flex: 1 }}>
-    //     <KeyboardAvoidingView style={{ flex: 1 }}>
-    //       <View style={{ flex: 1 }}>
-    //         <ScrollView style={{ flex: 1, marginBottom: 60 }}>
-    //           {messages.length > 0 ? (
-    //             messages.map((data, i) => (
-    //               <View
-    //                 key={i}
-    //                 style={{
-    //                   flexDirection: "row",
-    //                   justifyContent:
-    //                     data.senderId !== receiverId
-    //                       ? "flex-end"
-    //                       : "flex-start",
-    //                   marginHorizontal: 5,
-    //                   marginVertical: 5,
-    //                 }}
-    //               >
-    //                 <Text
-    //                   style={{
-    //                     textAlign: "left",
-    //                     padding: 10,
-    //                     backgroundColor:
-    //                       data.senderId !== receiverId ? "#d1f5d3" : "#fff",
-    //                     borderRadius: 10,
-    //                     borderBottomEndRadius: 0,
-    //                     maxWidth: "75%",
-    //                   }}
-    //                 >
-    //                   {data.message}
-    //                 </Text>
-    //               </View>
-    //             ))
-    //           ) : (
-    //             <Text style={{ textAlign: "center", marginTop: 20 }}>
-    //               No Messages Yet
-    //             </Text>
-    //           )}
-    //         </ScrollView>
-
-    //         <View style={styles.sendBar}>
-    //           <TextInput
-    //             style={styles.input}
-    //             placeholder="Message"
-    //             value={sendMsg}
-    //             onChangeText={setSendMsg}
-    //           />
-    //           <Icon
-    //             name="send"
-    //             color="white"
-    //             size={30}
-    //             style={styles.sendBtn}
-    //             onPress={handleSendMessage}
-    //           />
-    //         </View>
-    //       </View>
-    //     </KeyboardAvoidingView>
-    //   </SafeAreaView>
-    // </SafeAreaProvider>
     <View style={styles.container}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
@@ -233,36 +173,6 @@ const Conversation = ({ route }) => {
 };
 
 export default Conversation;
-
-// const styles = StyleSheet.create({
-//   input: {
-//     flex: 1,
-//     marginHorizontal: 10,
-//     height: 50,
-//     paddingHorizontal: 15,
-//     backgroundColor: "#f8f8f8",
-//     borderRadius: 25,
-//     borderWidth: 1,
-//     borderColor: "gray",
-//   },
-//   sendBar: {
-//     position: "absolute",
-//     bottom: 0,
-//     left: 0,
-//     right: 0,
-//     flexDirection: "row",
-//     alignItems: "center",
-//     paddingHorizontal: 10,
-//     paddingVertical: 5,
-//     borderTopColor: "gray",
-//   },
-//   sendBtn: {
-//     marginLeft: 10,
-//     backgroundColor: "#25D366",
-//     padding: 8,
-//     borderRadius: 50,
-//   },
-// });
 
 const styles = StyleSheet.create({
   container: {

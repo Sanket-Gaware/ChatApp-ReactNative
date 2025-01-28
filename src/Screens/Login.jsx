@@ -12,7 +12,6 @@ import {
   View,
 } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-// import LinearGradient from "react-native-linear-gradient";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("sanket1@gmail.com");
@@ -58,10 +57,6 @@ const Login = ({ navigation }) => {
   };
   return (
     <SafeAreaProvider style={styles.container}>
-      {/* <LinearGradient
-        colors={["#6a11cb", "#2575fc"]} 
-        style={styles.container}
-      > */}
       <SafeAreaView style={styles.innerContainer}>
         <Text style={styles.title}>ChatApp</Text>
         <Text style={styles.subtitle}>Log in to your account</Text>
@@ -93,7 +88,6 @@ const Login = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </SafeAreaView>
-      {/* </LinearGradient> */}
     </SafeAreaProvider>
   );
 };
@@ -115,7 +109,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 5,
-    elevation: 5, // For Android shadow
+    elevation: 5,
   },
   title: {
     fontSize: 24,
@@ -141,9 +135,7 @@ const styles = StyleSheet.create({
     color: "#333",
     backgroundColor: "#f9f9f9",
   },
-  input:{
-
-  },
+  input: {},
   loginBtn: {
     backgroundColor: "#6a11cb",
     borderRadius: 10,
