@@ -16,6 +16,7 @@
       "supportsTablet": true
     },
     "android": {
+       "package": "com.gawaresanket03.chatapp" ,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -23,6 +24,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e2fde0ab-1d2e-4dea-b912-61c5767b061b"
+      }
     }
   }
 }
