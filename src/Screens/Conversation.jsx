@@ -1,6 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import {
   KeyboardAvoidingView,
   Platform,
@@ -15,6 +15,7 @@ import useSocket from "../Hook/useSocket";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 const Conversation = ({ route }) => {
+  const scrollViewRef = useRef();
   const [sendMsg, setSendMsg] = useState("");
   const [messages, setMessages] = useState([]);
   const [token, setToken] = useState("");
@@ -106,7 +107,7 @@ const Conversation = ({ route }) => {
         );
       }
     }
-  };
+  }; 
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView
@@ -114,7 +115,11 @@ const Conversation = ({ route }) => {
         behavior={Platform.OS === "ios" ? "padding" : undefined}
       >
         {/* Messages Area */}
-        <ScrollView style={styles.chatArea}>
+        <ScrollView  
+          // ref={scrollViewRef}
+          style={styles.chatArea}
+          // onContentSizeChange={() => scrollViewRef.current?.scrollToEnd({ animated: true })}
+        >
           {messages.length > 0 ? (
             messages.map((data, i) => (
               <View

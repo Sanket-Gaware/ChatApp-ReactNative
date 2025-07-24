@@ -1,10 +1,12 @@
 import { StyleSheet, View } from "react-native";
 import Navigation from "./src/Navigation/Navigation";
+import Toast from 'react-native-toast-message';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Navigation />
+      <Toast />
     </View>
   );
 }

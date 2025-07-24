@@ -7,6 +7,7 @@ import {
   View,
 } from "react-native";
 import axios from "axios";
+import Toast from 'react-native-toast-message';
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -64,10 +65,10 @@ const Signup = () => {
       );
 
       if (res.status === 201) {
-        // Toast.show({
-        //   type: "success",
-        //   text1: "Account created successfully!",
-        // });
+        Toast.show({
+          type: "success",
+          text1: "Account created successfully!",
+        });
         // Optionally reset the form
         setForm({
           firstName: "",
@@ -81,11 +82,11 @@ const Signup = () => {
         setErrors({});
       }
     } catch (err) {
-      // Toast.show({
-      //   type: "error",
-      //   text1: "Signup failed",
-      //   text2: err.response?.data?.message || err.message,
-      // });
+      Toast.show({
+        type: "error",
+        text1: "Signup failed",
+        text2: err.response?.data?.message || err.message,
+      });
       console.log(err);
     }
   };

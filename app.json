@@ -1,4 +1,4 @@
-{
+{ 
   "expo": {
     "name": "Chat-App",
     "slug": "Chat-App",
@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/chat.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,7 +18,7 @@
     "android": {
        "package": "com.gawaresanket03.chatapp" ,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/chat.png",
         "backgroundColor": "#ffffff"
       }
     },

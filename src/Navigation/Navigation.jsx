@@ -12,6 +12,7 @@ const Navigation = () => {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
+      
         <Stack.Screen name="ChatApp" component={DisplayUsers} />
         <Stack.Screen name="Conversation" component={Conversation} />
       </Stack.Navigator>
